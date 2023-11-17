@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu sou seu hater numero um!</title>
+
+
+    <style>
+
+        body{
+            background-color: purple;
+        }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 560px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: purple;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -60px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: purple;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Eu sou seu hater numero um!</h1>
+
+        <img src="https://i.pinimg.com/originals/d9/fb/3d/d9fb3d22a488b1c05f72ae57ca9e2f23.gif" alt="" sizes="" srcset="">
+        
+        <h2>A Eliza é a maioral!</h2>
+        <h5>Esperando a Eliza abrir um canal</h5>
+
+        
+
+        <button id="sim" onclick="obrigado()">  Sim!  </button>
+        <button onmouseover="Fuja()" id="nao">  Não!  </button>  
+        
+        
+
+
+
+
+
+
+    </div>
+
+    <script>
+        function Fuja(){
+            var botaoNao = document.getElementById ("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+            
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random()* maxX);
+            var aleatorioY = Math.floor(Math.random()*maxY);
+
+            botaoNao.style.lef = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+        
+        function obrigado(){
+            alert("Muito obrigado pelas lives Zen <3 Você e a Eliza são incriveis! Sucesso para vocês :)")
+        }
+    </script>
+
+
+</body>
+</html>
